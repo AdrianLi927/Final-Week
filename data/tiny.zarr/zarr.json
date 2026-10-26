@@ -1,0 +1,8 @@
+{
+  "attributes": {
+    "study": "Final exercise test store",
+    "note": "compression tests on hydrogel cylinders; strain is a fraction; force and area units are in each experiment's attributes; no noise"
+  },
+  "zarr_format": 3,
+  "node_type": "group"
+}
