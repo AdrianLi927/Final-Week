@@ -9,7 +9,7 @@ STORE = "data/gels.zarr"
 # Three smoothing widths, in points (every experiment has one point every
 # 0.1 % strain, so 10 points = 1 % strain): one too small, the one you trust,
 # one too large. Change these numbers to your choice, and justify them in README.md.
-WIDTHS_POINTS = [0, 0, 0]          # <- replace with your three widths
+WIDTHS_POINTS = [5, 24, 100]          # <- replace with your three widths
 
 for width in WIDTHS_POINTS:
     summary = mechanics.run_pipeline(STORE, width)
