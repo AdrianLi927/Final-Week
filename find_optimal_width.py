@@ -15,11 +15,14 @@ def main() -> None:
     results_by_type: dict[str, list[tuple[int, float, float, int]]] = {}
 
     for width in range(MIN_WIDTH, MAX_WIDTH + 1):
+        print(f"Running pipeline for width {width}")
         summary = mechanics.run_pipeline(STORE, width)
         for gel_type, result in summary.items():
             results_by_type.setdefault(gel_type, []).append(
                 (width, result["mean_E_pa"], result["sd_E_pa"], result["n"])
             )
+            
+    print("Plotting Graph...")
 
     figure, axis = plt.subplots()
     for gel_type, results in sorted(results_by_type.items()):
